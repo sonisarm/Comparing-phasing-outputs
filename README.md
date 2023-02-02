@@ -11,5 +11,7 @@ We utilize individuals with pedigree information and perform both types of phasi
 This repository provides a step-by-step guide to the phasing process, allowing you to easily replicate our results and make informed decisions about the best phasing strategy for your data. Join us on this exploration of genomic data analysis and the crucial role that phasing plays in the process.
 
 ## 1) Filtering VCFs
-
+GATK Best-practices technical filtering and sequencing depth filtering.
 **CODE**: ```1_FilteringVCFs.sh```
+
+## 2) Phasing with WhatsHap
