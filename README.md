@@ -1,4 +1,6 @@
 # Comparing phasing outputs 🧬
+================
+Sonia Sarmiento
 
 ## Introduction
 Welcome to this repository, which focuses on the essential task of choosing the best phasing strategy for your genomic data. Our aim is to provide a thorough comparison of read-based and pedigree phasing and determine the most effective approach for a given dataset.
