@@ -21,7 +21,6 @@ whatshap phase \
 ####################
 # Pedigree phasing # 
 ####################
-
 # ADDITIONAL INPUT:
 #ped: PED file containing pedigree information of individuals (Offspring ID | Dad ID | Mom ID | Sex). This file is required for pedigree phasing but not for read-base phasing.
 whatshap phase \
