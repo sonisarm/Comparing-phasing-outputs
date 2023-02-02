@@ -78,8 +78,10 @@ SwitchShapeIt 5 is a code for comparing phased VCF genotypes with Mendelian inhe
 * Output: Switch error rate between Validation (Unphased - Mendelian Inheritance) and Phased VCF. The ouput can be either per sample (```$OUTPUT_PREFIX.sample.switch.txt.gz```) or per SNP (```$OUTPUT_PREFIX.variant.switch.txt.gz```). These are a 4 columns file, with col1=sample_id (for sample.switch.txt.gz only) and col4=switch error rate.
 
 ### Step 7: Plotting results
-
-
+Once you have the output files, you can plot the switch error rate per sample using an R code.
+* Input: ```$OUTPUT_PREFIX.sample.switch.txt.gz``` (one per phasing type)
+* Script: ```7_Plotting.R```
+* Output: ```Results_Sample_Switch.png```
 
 
 ## Results and discussion
