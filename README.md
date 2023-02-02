@@ -32,10 +32,10 @@ Filtering for minor allele cound (MAC), missing data and excluding indels.
 * Output: filtered vcf ($filter2.recode.vcf.gz)
 
 ### Step 3: ShapeIt phasing
+ShapeIt software enables you to refine genetic data that has already been phased using WhatsHap or another phasing tool. The refinement process performed by ShapeIt involves using the information from multiple individuals to improve the accuracy of haplotype inference and resolve any remaining ambiguities in the phased data. The result is a more accurate and robust representation of haplotype information, which can be used for a variety of downstream applications, such as imputation, association studies, and haplotype-based analyses. By incorporating ShapeIt into your phasing workflow, you can ensure that your results are based on the most accurate and reliable data possible.
 
-
-* Input: phased VCF ($phased_vcf)
-* Script: ```3_FilteredVCFs.sh```
-* Output: filtered vcf ($filter2.recode.vcf.gz)
+* Input: filtered VCF ($)
+* Script: ```4_ShapeIt```
+* Output: phased vcf ()
 
 
