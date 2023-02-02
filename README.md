@@ -67,5 +67,6 @@ bcftools index  $final.vcf.gz
 # ${myPATH}/final_CHR3.vcf.gz
 ```
 
+### Step 6: Comparing phased VCFs with Mendelian Inheritance
 
 
