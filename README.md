@@ -12,3 +12,7 @@ This repository provides a step-by-step guide to the phasing process, allowing y
 
 
 
+```console
+foo@bar:~$ whoami
+foo
+```
