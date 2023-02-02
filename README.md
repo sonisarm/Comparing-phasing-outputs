@@ -12,7 +12,8 @@ This repository provides a step-by-step guide to the phasing process, allowing y
 
 ## Step 1: Filtering VCFs
 GATK Best-practices technical filtering, removing masked regions and sequencing depth filtering.
-* INPUT: VCF file
+* Input: VCF file ($vcf) and reference genome ($ref)
 * Script: ```1_FilteringVCFs.sh```
+* Output: 
 
 ## 2) Phasing with WhatsHap
