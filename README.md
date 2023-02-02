@@ -34,8 +34,13 @@ Filtering for minor allele cound (MAC), missing data and excluding indels.
 ### Step 3: ShapeIt phasing
 ShapeIt software enables you to refine genetic data that has already been phased using WhatsHap or another phasing tool. The refinement process performed by ShapeIt involves using the information from multiple individuals to improve the accuracy of haplotype inference and resolve any remaining ambiguities in the phased data. The result is a more accurate and robust representation of haplotype information, which can be used for a variety of downstream applications, such as imputation, association studies, and haplotype-based analyses. By incorporating ShapeIt into your phasing workflow, you can ensure that your results are based on the most accurate and reliable data possible.
 
+**IMPORTANT**: Shapeit is a powerful software for haplotype phasing, however it is important to be aware of its limitations when dealing with related individuals. As the software uses population-based phasing that takes into account the genotypes of multiple individuals, it may result in a biased outcome if there are related individuals present in the sample. To avoid this issue, it is recommended to phase related samples with a reference panel that includes individuals that have been previously phased with Whtashap and Shapeit and are known to be unrelated. To identify unrelated samples in your dataset, you can follow the guide ```FindingUnrelated.md``` 
+
 * Input: filtered VCF ($)
-* Script: ```4_ShapeIt```
+* Script: ```4_ShapeIt.sh```
 * Output: phased vcf ()
+
+
+
 
 
