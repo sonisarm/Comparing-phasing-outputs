@@ -26,12 +26,30 @@ This repository provides a step-by-step guide to the phasing process, allowing y
         	--filter-expression "MQRankSum < -12.5" --filter-name "MQRS-12.5" \
         	--filter-expression "MQ < 40.0" --filter-name "MQ40"
 
-	#Subsetting
+	#Subsetting the selected variants
 	gatk SelectVariants \
         	-R $ref \
         	-V $intermediateVCF \
-        	-O $outputVCF \
+        	-O $filteredVCF \
         	--exclude-filtered true \
         	--exclude-non-variants
+		
+		
+	# Remove masked regions
+	bcftools view -O z -o $outputVCF -R maskedregions_150_90.bed \
+	$filteredVCF.vcf.gz
+
+	#Index bcf
+	tabix $outputVCF
+	
+	# Filter variants for sequencing depth (DP)
+	gatk VariantFiltration \
+	-V ${outvcf} \
+	-G-filter "DP > $cutoffhigh" \
+	-G-filter-name 'GDPhigh' \
+	-G-filter "DP < $cutofflow" \
+	-G-filter-name 'GDPlow' \
+	-O  ${outvcf2} \
+	--set-filtered-genotype-to-no-call true
 
 ```
