@@ -20,7 +20,7 @@ GATK Best-practices technical filtering, removing masked regions and sequencing 
 * Output: filtered VCF
 
 ### Step 2: Phasing with WhatsHap
-Whatshap is a software that allows you to phase genomic data, either using [only read-based information](https://www.biorxiv.org/content/10.1101/085050v2.full.pdf) or using both [read-based information and pedigree information](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4908360/) if you provide a PED file. With this tool, you can phase both single nucleotide polymorphisms (SNPs) and structural variants (SVs), making it a valuable resource for exploring genetic variation in your data. The process of phasing involves grouping variants that are likely to be inherited together, providing insight into the haplotype structure of your sample.
+Whatshap is a software that allows you to phase genomic data, either using only [read-based](https://www.biorxiv.org/content/10.1101/085050v2.full.pdf) information or using both [read-based and pedigree](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4908360/) information if you provide a PED file. With this tool, you can phase both single nucleotide polymorphisms (SNPs) and structural variants (SVs), making it a valuable resource for exploring genetic variation in your data. The process of phasing involves grouping variants that are likely to be inherited together, providing insight into the haplotype structure of your sample.
 * Input: filtered VCF file ($input_vcf), BAM file ($bam), PED file ($ped), reference genome ($ref)
 * Script: ```2_WhatsHap.sh```
 * Output: phased VCF
