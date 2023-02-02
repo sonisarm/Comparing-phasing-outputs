@@ -31,7 +31,7 @@ Filtering for minor allele cound (MAC), missing data and excluding indels.
 * Script: ```3_Post-WhatsHap_filtering.sh```
 * Output: filtered vcf ($filter2.recode.vcf.gz)
 
-### Step 3: ShapeIt phasing
+### Step 4: ShapeIt phasing
 In this step we phase our genetic data with [ShapeIt4](https://www.nature.com/articles/s41467-019-13225-y) software already phased using WhatsHap because it improves accuracy of haplotype inference and resolves ambiguities in the data, resulting in a more accurate representation of haplotype information for downstream applications (e.g. imputation). Specifically, ShapeIt uses information from multiple individuals to perform [population-based phasing](https://academic.oup.com/bioinformatics/article/35/14/i242/5529122). It is important to be aware of its limitations when dealing with related individuals, as it may result in a biased outcome. To avoid this, it is recommended to phase related samples with a reference panel of known unrelated individuals, previously phased with WhatsHap and ShapeIt according to this same workflow. To identify unrelated samples in your dataset, you can follow the guide ```FindingUnrelated.md```.
 
 * Input: filtered VCF ($)
@@ -39,6 +39,23 @@ In this step we phase our genetic data with [ShapeIt4](https://www.nature.com/ar
 * Output: phased vcf ()
 
 
+### Step 5: Merging phased datasets
+If you have both unrelated and related samples, you can merge both datasets using the following code. Moreover, before merging you would have to intersect SNPs between the two VCFs.
+
+```bash
+# Keep intersect snps of unrelated
+bcftools isec -n=2 -w1 -O z -o $unrelated_intersectsnps.vcf.gz unrelated.vcf.gz related.vcf.gz
+
+# Keep intersect snps of related
+bcftools isec -n=2 -w1 -O z -o $related-intersectsnps.vcf.gz related.vcf.gz unrelated.vcf.gz
+
+# If you split your dataset per chromosome/scaffold, you can concatenate the files
+
+
+# Merge datasets
+bcftools merge -O z -o $final.vcf $unrelated.vcf.gz $related.vcf.gz
+
+```
 
 
 
