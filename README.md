@@ -26,6 +26,16 @@ Whatshap is a software that allows you to phase genomic data, either using only 
 * Output: phased VCF
 
 ### Step 3: Filtering VCFs for quality
+Filtering for minor allele cound (MAC), missing data and excluding indels.
 * Input: phased VCF ($phased_vcf)
 * Script: ```3_FilteredVCFs.sh```
 * Output: filtered vcf ($filter2.recode.vcf.gz)
+
+### Step 3: ShapeIt phasing
+
+
+* Input: phased VCF ($phased_vcf)
+* Script: ```3_FilteredVCFs.sh```
+* Output: filtered vcf ($filter2.recode.vcf.gz)
+
+
