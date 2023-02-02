@@ -12,5 +12,9 @@ VAL=UNPHASED_PARENTS_AND_OFFSPRING
 EST=PHASED_OffspringONLY
 #Output prefix:
 OUTPUT_PREFIX=${myPATH}
-# Switch Running line
+
+#### SHAPEIT5 switch tool ###
 ${Switch} --validation ${VAL}_${CHR}.vcf.gz --estimation ${EST}_${CHR}.vcf.gz --region ${CHR} --pedigree ${ped} --output ${OUTPUT_PREFIX}_${CHR}
+
+# this command produce multiple output file.
+# You may want to look at the output named $OUTPUT_PREFIX.sample.switch.txt.gz for Switch Error Rate (SER) per sample. This is a 4 columns file, with col1=sample_id and col4=switch error rate.
