@@ -5,7 +5,7 @@
 whatshap phase \
      --ped $ped \
      -o $phased.vcf \
-     --reference ${ref} \
+     --reference $ref \
      --indels \
      $input.vcf.gz \
      $bam.bam
