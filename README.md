@@ -60,12 +60,9 @@ bcftools concat --threads 8 --file-list $vcf_ordered.list -O z -o $final.vcf.gz
 bcftools index  $final.vcf.gz
 
 # Example of $vcf_ordered.list : 
-# final_CHR1.vcf.gz
-# final_CHR2.vcf.gz
-# final_CHR3.vcf.gz
-
-
-
+# ${myPATH}/final_CHR1.vcf.gz
+# ${myPATH}/final_CHR2.vcf.gz
+# ${myPATH}/final_CHR3.vcf.gz
 ```
 
 
