@@ -14,7 +14,7 @@ ped=${myPATH}/PEDFile.ped
 #EST = VCF file with Phased offspring
 EST=PHASED_OffspringONLY
 #Output prefix:
-OUTPUT_PREFIX=${myPATH}/Output1
+OUTPUT_PREFIX=${myPATH}/outputexample
 
 #### SHAPEIT5 switch tool ###
 ${Switch} --validation ${VAL}_${CHR}.vcf.gz --estimation ${EST}_${CHR}.vcf.gz --region ${CHR} --pedigree ${ped} --output ${OUTPUT_PREFIX}_${CHR}
