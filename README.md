@@ -53,10 +53,10 @@ If you have both unrelated and related samples, you can merge both datasets usin
 bcftools isec -n=2 -w1 -O z -o $unrelated_intersectsnps.vcf.gz unrelated.vcf.gz related.vcf.gz
 
 # Keep intersect snps of related
-bcftools isec -n=2 -w1 -O z -o $related-intersectsnps.vcf.gz related.vcf.gz unrelated.vcf.gz
+bcftools isec -n=2 -w1 -O z -o $related_intersectsnps.vcf.gz related.vcf.gz unrelated.vcf.gz
 
 # Merge datasets
-bcftools merge -O z -o $final.vcf $unrelated.vcf.gz $related.vcf.gz
+bcftools merge -O z -o $final.vcf $unrelated_intersectsnps.vcf.gz $related_intersectsnps.vcf.gz
 
 # If you split your dataset per chromosome/scaffold, you can concatenate the files
 bcftools concat --threads 8 --file-list $vcf_ordered.list -O z -o $final.vcf.gz
