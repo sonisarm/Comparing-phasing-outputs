@@ -52,11 +52,19 @@ bcftools isec -n=2 -w1 -O z -o $unrelated_intersectsnps.vcf.gz unrelated.vcf.gz 
 # Keep intersect snps of related
 bcftools isec -n=2 -w1 -O z -o $related-intersectsnps.vcf.gz related.vcf.gz unrelated.vcf.gz
 
-# If you split your dataset per chromosome/scaffold, you can concatenate the files
-
-
 # Merge datasets
 bcftools merge -O z -o $final.vcf $unrelated.vcf.gz $related.vcf.gz
+
+# If you split your dataset per chromosome/scaffold, you can concatenate the files
+bcftools concat --threads 8 --file-list $vcf_ordered.list -O z -o $final.vcf.gz
+bcftools index  $final.vcf.gz
+
+# Example of $vcf_ordered.list : 
+# final_CHR1.vcf.gz
+# final_CHR2.vcf.gz
+# final_CHR3.vcf.gz
+
+
 
 ```
 
