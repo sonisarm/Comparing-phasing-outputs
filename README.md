@@ -17,7 +17,11 @@ GATK Best-practices technical filtering, removing masked regions and sequencing 
 * Output: filtered VCF
 
 ### Step 2: Phasing with WhatsHap
-
 * Input: filtered VCF file ($input_vcf), BAM file ($bam), PED file ($ped), reference genome ($ref)
 * Script: ```2_WhatsHap.sh```
 * Output: phased VCF
+
+### Step 3: Filtering VCFs for quality
+* Input: phased VCF
+* Script: ```3_FilteredVCFs.sh```
+* Output: filtered vcf ($filter2.recode.vcf.gz)
