@@ -39,7 +39,7 @@ In this step we phase our genetic data with [ShapeIt4](https://www.nature.com/ar
 * Output: phased vcf ()
 
 
-### Step 5: Merging phased datasets
+### Step 5 (optional): Merging phased datasets
 If you have both unrelated and related samples, you can merge both datasets using the following code. Moreover, before merging you would have to intersect SNPs between the two VCFs.
 
 ```bash
