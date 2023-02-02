@@ -12,6 +12,8 @@ This repository provides a step-by-step guide to the phasing process, allowing y
 
 ## 1) Filtering VCFs
 
+CODE: /1_FilteringVCFs.sh
+
 
 ```console
 	#Techfilters SNPs selection
