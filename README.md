@@ -32,7 +32,7 @@ Filtering for minor allele cound (MAC), missing data and excluding indels.
 * Output: filtered vcf ($filter2.recode.vcf.gz)
 
 ### Step 3: ShapeIt phasing
-In this step we phase our genetic data with ShapeIt software already phased using WhatsHap because it improves accuracy of haplotype inference and resolves ambiguities in the data, resulting in a more accurate representation of haplotype information for downstream applications. Specifically, ShapeIt uses information from multiple individuals to perform (population-based phasing)[https://academic.oup.com/bioinformatics/article/35/14/i242/5529122]. It is important to be aware of its limitations when dealing with related individuals, as it may result in a biased outcome. To avoid this, it is recommended to phase related samples with a reference panel of known unrelated individuals.
+In this step we phase our genetic data with ShapeIt software already phased using WhatsHap because it improves accuracy of haplotype inference and resolves ambiguities in the data, resulting in a more accurate representation of haplotype information for downstream applications. Specifically, ShapeIt uses information from multiple individuals to perform [population-based phasing](https://academic.oup.com/bioinformatics/article/35/14/i242/5529122). It is important to be aware of its limitations when dealing with related individuals, as it may result in a biased outcome. To avoid this, it is recommended to phase related samples with a reference panel of known unrelated individuals.
 
 
 
