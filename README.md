@@ -68,7 +68,8 @@ bcftools index  $final.vcf.gz
 ```
 
 ### Step 6: Comparing phased VCFs with Mendelian Inheritance
-SwitchShapeIt 5 is a code for comparing phased VCF genotypes with Mendelian inheritance to assess phasing accuracy. Here, we use it to compare read-base and pedigree phasing. 
+SwitchShapeIt 5 is a code for comparing phased VCF genotypes with Mendelian inheritance to assess phasing accuracy. Here, we use it to compare read-base and pedigree phasing. **Important**: This procedure can only be performed on offspring with both unphased parents available for comparison.
+
 
 * Input: phased vcf (shapeit phased read-base/pedigree), 
 * Script: ```6_Switch.sh```
