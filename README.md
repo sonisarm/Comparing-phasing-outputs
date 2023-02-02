@@ -72,6 +72,6 @@ SwitchShapeIt 5 is a code for comparing phased VCF genotypes with Mendelian inhe
 
 * Input: phased vcf (shapeit phased read-base/pedigree), 
 * Script: ```6_Switch.sh```
-* Output: Switch error rate between Validation (Unphased - Mendelian Inheritance) and Phased VCF. The ouput can be either per sample ('$OUTPUT_PREFIX.sample.switch.txt.gz') or per SNP ('$OUTPUT_PREFIX.variant.switch.txt.gz')
+* Output: Switch error rate between Validation (Unphased - Mendelian Inheritance) and Phased VCF. The ouput can be either per sample (```$OUTPUT_PREFIX.sample.switch.txt.gz```) or per SNP (```$OUTPUT_PREFIX.variant.switch.txt.gz```)
 
 
