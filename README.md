@@ -2,7 +2,7 @@
 
 Welcome to this repository, where we focus on the essential task of choosing the best phasing strategy for your genomic data. Our aim is to provide a thorough comparison of read-based and pedigree phasing and determine the most effective approach for a given dataset.
 
-We utilize individuals with pedigree information and perform both types of phasing, comparing the results with mendelian inheritance. The workflow of the phasing process is as follows: 
+We utilize individuals with pedigree information and perform both types of phasing, comparing the results with mendelian inheritance. The workflow of the phasing process starts with called variants in a VCF and continues as follows: 
 1) Filter VCFs
 2) Phase with WhatsHap (either pedigree or read-based phasing)
 3) Filtering to ensure quality
