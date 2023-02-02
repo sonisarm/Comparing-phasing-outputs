@@ -22,6 +22,6 @@ GATK Best-practices technical filtering, removing masked regions and sequencing 
 * Output: phased VCF
 
 ### Step 3: Filtering VCFs for quality
-* Input: phased VCF
+* Input: phased VCF ($phased_vcf)
 * Script: ```3_FilteredVCFs.sh```
 * Output: filtered vcf ($filter2.recode.vcf.gz)
