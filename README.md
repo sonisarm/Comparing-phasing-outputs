@@ -12,6 +12,7 @@ This repository provides a step-by-step guide to the phasing process, allowing y
 
 ## 1) Filtering VCFs
 GATK Best-practices technical filtering and sequencing depth filtering.
+
 **CODE**: ```1_FilteringVCFs.sh```
 
 ## 2) Phasing with WhatsHap
