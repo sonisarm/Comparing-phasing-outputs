@@ -10,13 +10,13 @@ We utilize individuals with pedigree information and perform both types of phasi
 
 This repository provides a step-by-step guide to the phasing process, allowing you to easily replicate our results and make informed decisions about the best phasing strategy for your data. Join us on this exploration of genomic data analysis and the crucial role that phasing plays in the process.
 
-## Step 1: Filtering VCFs
+### Step 1: Filtering VCFs
 GATK Best-practices technical filtering, removing masked regions and sequencing depth filtering.
 * Input: VCF file ($vcf) and reference genome ($ref)
 * Script: ```1_FilteringVCFs.sh```
 * Output: filtered VCF
 
-## 2) Phasing with WhatsHap
+### Step 2: Phasing with WhatsHap
 
 * Input: filtered VCF file ($input_vcf), BAM file ($bam), PED file ($ped), reference genome ($ref)
 * Script: ```2_WhatsHap.sh```
