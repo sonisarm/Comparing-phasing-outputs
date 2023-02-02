@@ -1,6 +1,8 @@
 # Comparing phasing outputs 🧬
 Author: Sonia Sarmiento
 
+### This repository provides a step-by-step guide to the phasing process, allowing you to easily replicate our results and make informed decisions about the best phasing strategy for your data. We here use mainly a HPC cluster with bash scripts and R code at the end for plotting.
+
 ## Introduction
 Welcome to this repository, which focuses on the essential task of choosing the best phasing strategy for your genomic data. Our aim is to provide a thorough comparison of read-based and pedigree phasing and determine the most effective approach for a given dataset.
 
@@ -11,8 +13,6 @@ We utilize individuals with pedigree information and perform both types of phasi
 4) ShapeIt for final phasing (population-based)
 
 After this, you obtain the final phased VCF files for the comparison.
-### Aim
-This repository provides a step-by-step guide to the phasing process, allowing you to easily replicate our results and make informed decisions about the best phasing strategy for your data. Join us on this exploration of genomic data analysis and the crucial role that phasing plays in the process.
 
 ## Workflow
 
