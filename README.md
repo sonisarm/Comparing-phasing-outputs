@@ -80,5 +80,5 @@ SwitchShapeIt 5 is a code for comparing phased VCF genotypes with Mendelian inhe
 ### Step 7: Plotting results
 Once you have the output files, you can plot the switch error rate per sample using an R code.
 * Input: $OUTPUT_PREFIX.sample.switch.txt.gz (one per phasing type)
-* Script: ```7_Plotting.R```
+* Script: ```7_Plotting_sample.R``` and ```7_Plotting_pervariant.R```
 * Output: Plotting of Switch Error Rate (SER) of different phasing types with Mendelian Inheritance.
