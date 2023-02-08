@@ -13,7 +13,7 @@ library(RColorBrewer)
 # Load Data
 df <- read.delim('TRIO_Super-Scaffold_14.variant.switch.txt', header=F, sep='')
 colnames(df) <- c('rm1', 'pos', 'rm2', 'rm3', 'trioSER')
-df$trioSER <- ifelse(trio$df=='NaN', NA, df$trioSER)
+df$trioSER <- ifelse(df$trioSER=='NaN', NA, df$trioSER)
 
 # Remove rows with NAs for both readbase and trio
 df_complete <- na.omit(df)
