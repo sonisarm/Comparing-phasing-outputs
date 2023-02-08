@@ -79,14 +79,6 @@ SwitchShapeIt 5 is a code for comparing phased VCF genotypes with Mendelian inhe
 
 ### Step 7: Plotting results
 Once you have the output files, you can plot the switch error rate per sample using an R code.
-* Input: ```$OUTPUT_PREFIX.sample.switch.txt.gz``` (one per phasing type)
+* Input: $OUTPUT_PREFIX.sample.switch.txt.gz (one per phasing type)
 * Script: ```7_Plotting.R```
-* Output: ```Results_Sample_Switch.png```
-
-
-## Results and discussion
-The plot suggests that trio phasing is more accurate than read-base phasing after undergoing phasing with ShapeIt. This conclusion is in line with the study conducted by [Garg et al., 2016](https://academic.oup.com/bioinformatics/article/32/12/i234/2288955), which similarly found that trio phasing was more accurate after undergoing phasing with WhatsHap. A comparison between phasing with one single trio (parents-offspring) and multiple trios (e.g. including offspring or grandparents) revealed that multiple trios did not lead to improved results and even resulted in greater discrepancies with Mendelian inheritance in some samples. This is contrary to observations from [Blackburn et al., 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253450/), who determined that phasing real and simulated data from human chromosome X with PULSAR with information of more offspring was more accurate (lower genotype error rate) than with less ofspring (tested 1-7 'children', Figure 3). To conclude, due to our findings and the high computational demands of running WhatsHap with multiple trios, I decided that trio phasing was the most appropriate and accurate method for the data.
-
-Example of results from comparing phasing types with switch tool:
-![](https://github.com/sonisarm/Comparing-phasing-outputs/blob/main/Results_Sample_Switch.png)
-
+* Output: Plotting of Switch Error Rate (SER) of different phasing types with Mendelian Inheritance.
