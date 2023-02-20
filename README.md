@@ -6,7 +6,7 @@ Author: Sonia Sarmiento
 #### Coding: I used mainly a HPC cluster with bash scripts and R code at the end for plotting.
 
 ## Introduction
-Welcome to this repository, which focuses on the essential task of choosing the best phasing strategy for your genomic data. Specificallz, I provide here a thorough comparison of read-based and pedigree phasing. For this purpose, I use individuals with pedigree information and either include it or not during the phasing to perform both types of phasing. Finally, I compare the phasing outcomes with Mendelian Inheritance for validation. The workflow of the phasing process starts with called variants in a VCF and continues as follows: 
+Welcome to this repository, which focuses on the essential task of choosing the best phasing strategy for your genomic data. Specifically, I provide here a thorough comparison of read-based and pedigree phasing. For this purpose, I use individuals with pedigree information and either include it or not during the phasing to perform both types of phasing. Finally, I compare the phasing outcomes with Mendelian Inheritance for validation. The workflow of the phasing process starts with called variants in a VCF and continues as follows: 
 1) Filter VCFs
 2) Phase with WhatsHap (either pedigree or read-based phasing)
 3) Filtering to ensure quality
